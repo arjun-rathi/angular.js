@@ -1,21 +1,17 @@
 ---
 framework: jasmine
-licenseTier: xsmall
-postMerge:
-  pattern:
-    - "./i18n/spec/*.js"
-    - "./i18n/ucd/spec/*.js"
-  strategy:
-    threshold: <5|100s|30m|6h>
-    type: <commit|time>
+preRun:
+     command:
+        - yarn install
 preMerge:
   pattern:
     - "./i18n/spec/*.js"
     - "./i18n/ucd/spec/*.js"
-preRun:
-     command:
-        - yarn install
+postMerge:
+  pattern:
+    - "./i18n/**/spec/*.js"
+    - "./i18n/ucd/spec/*.js"
 postRun:
      command:
         - yarn --version
-version: 2.1
+version: 1.0
