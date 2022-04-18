@@ -19,3 +19,4 @@ preMerge:
   pattern:
     - "./i18n/spec/*.js"
     - "./i18n/ucd/spec/*.js"
+nodeVersion: 14.16.1
